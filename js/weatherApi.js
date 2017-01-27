@@ -1,3 +1,8 @@
+/*
+ * Creates a weather entry in the correct format
+ * Input : Object - weather entry
+ * Returns : Object - formatted weather entry
+ */
 function createWeatherEntry(entry) {
   const { main: condition, description } = entry.weather[0];
   const { temp } = entry.main;
@@ -8,12 +13,22 @@ function createWeatherEntry(entry) {
   };
 }
 
+/*
+ * Transforms array of daily weather entries into correct format
+ * Input : Array of daily weather entres
+ * Returns : Array of formatted daily weather entries
+ */
 function transformDailyWeatherEntries(entries) {
   return entries.map((entry) => {
     return createWeatherEntry(entry);
   });
 }
 
+/*
+ * Returns one weather reading for each day of the five day forecast
+ * Input : Array of weather entries
+ * Returns : Array of weather entries - one per day
+ */
 function getDailyWeatherEntries(entries) {
   return entries.filter((entry, idx) => {
     if (idx % 8 === 0) {
@@ -22,6 +37,11 @@ function getDailyWeatherEntries(entries) {
   });
 }
 
+/*
+ * Transforms data returned from Api into required format
+ * Input : data from API call, unit for temp readings
+ * Returns : Object
+ */
 function transformWeatherData(data, unit) {
   const dailyEntries = getDailyWeatherEntries(data.list);
   const transformedDailyEntries = transformDailyWeatherEntries(dailyEntries);
