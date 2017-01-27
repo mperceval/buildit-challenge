@@ -38,8 +38,7 @@ describe('weatherApi', () => {
       };
       expect(expectedResult).to.be.eql(actualResult);
     });
+    // Tidy up
+    server.restore();
   });
-
-  // Tidy up
-  server.restore();
 });
