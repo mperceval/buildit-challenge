@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 
 import getWeather from '../js/weatherApi.js';
-import response from './getWeatherResponse';
+import response from './fakeData/getWeatherResponse';
 
 
 describe('weatherApi', () => {
@@ -24,7 +24,7 @@ describe('weatherApi', () => {
     });
     server.respond();
 
-    it('should return object with the correct shape and entries', () => {
+    it('should return object with the correct shape and entries for default city - London', () => {
       const expectedResult = {
         entries: [
           { condition: 'Clear', description: 'clear sky', temp: 27.32 },
