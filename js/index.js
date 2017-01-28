@@ -13,5 +13,6 @@ getWeather()
 
   })
   .catch((err) => {
-    console.log('error : ', err);
+    // TODO : Does this work?
+    weatherPanel.innerHTML = err;
   })

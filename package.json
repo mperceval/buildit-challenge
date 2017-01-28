@@ -8,8 +8,9 @@
     "open:src": "webpack-dev-server --progress --colors --content-base build/",
     "test": "mocha --compilers js:babel-core/register --require ./test/test-helper.js --recursive",
     "test:watch": "npm run test -- --watch",
-    "lint": "node_modules/.bin/esw webpack.config.* src tools",
-    "lint:watch": "npm run lint -- -- watch"
+    "lint": "node_modules/.bin/esw webpack.config.* js",
+    "lint:watch": "npm run lint -- watch",
+    "build": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",

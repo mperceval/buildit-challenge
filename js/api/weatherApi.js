@@ -58,32 +58,32 @@ function transformWeatherData(data, unit) {
  * Input : City code
  * Returns : Promise
  */
- export default function getWeather(cityCode='2643743', unit='Imperial') {
-   const url = `http://api.openweathermap.org/data/2.5/forecast?id=${cityCode}&APPID=52a1bf84230d94a0ea4cfc1f30af936e&units=${unit}`;
+export default function getWeather(cityCode='2643743', unit='Imperial') {
+  const url = `http://api.openweathermap.org/data/2.5/forecast?id=${cityCode}&APPID=52a1bf84230d94a0ea4cfc1f30af936e&units=${unit}`;
 
-   // Return new promise
-   return new Promise((resolve, reject) => {
-     // Make XHR request
-     const req = new XMLHttpRequest();
-     req.open('GET', url);
+  // Return new promise
+  return new Promise((resolve, reject) => {
+    // Make XHR request
+    const req = new XMLHttpRequest();
+    req.open('GET', url);
 
-     req.onload = () => {
-       // This is called even on 404 so check the status
-       if (req.status === 200) {
-         const responseJSONData = JSON.parse(req.response);
-         const weather = transformWeatherData(responseJSONData, unit);
-         resolve(weather);
-       } else {
-         // Otherwise reject
-         reject(Error(req.statusText));
-       }
-     };
+    req.onload = () => {
+      // This is called even on 404 so check the status
+      if (req.status === 200) {
+        const responseJSONData = JSON.parse(req.response);
+        const weather = transformWeatherData(responseJSONData, unit);
+        resolve(weather);
+      } else {
+        // Otherwise reject
+        reject(Error(req.statusText));
+      }
+    };
 
-     req.onError = () => {
-       reject(Error('Network Error'));
-     };
+    req.onError = () => {
+      reject(Error('Network Error'));
+    };
 
-     // Make the request
-     req.send();
-   });
- };
+    // Make the request
+    req.send();
+  });
+}
