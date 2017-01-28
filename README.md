@@ -24,15 +24,13 @@ http://buildit-challenge.esy.es
 
 ## Improvements:
 
-UI - Displaying errors.
-UI - Make responsive.
-UI - Better style.
-UI - Better use of icons - dependent on day/night/conditions.
-UI - Add provision to select city - API supports this.
-UI - Extra weather conditions - only currently supporting - clear, rain, cloud, snow.
-UI - Display forecast.  API currently returning 5 day forecast but only showing current day.  Also currently only returning single data point per day.  There's loads more information available - 3 hourly updates - currently not being used.
-
-Testing - More API tests required for failure conditions.
-Testing - No UI tests currently.
-
-Build - Needs a proper production build process.
+1.  UI - Displaying errors.
+2.  UI - Make responsive.
+3.  UI - Better style.
+4.  UI - Better use of icons - dependent on day/night/conditions.
+5.  UI - Add provision to select city - API supports this.
+6.  UI - Extra weather conditions - only currently supporting - clear, rain, cloud, snow.
+7.  UI - Display forecast.  API currently returning 5 day forecast but only showing current day.  Also currently only returning single data point per day.  There's loads more information available - 3 hourly updates - currently not being used.
+8.  Testing - More API tests required for failure conditions.
+9.  Testing - No UI tests currently.
+10. Build - Needs a proper production build process.
