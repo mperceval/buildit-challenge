@@ -1,4 +1,4 @@
-import getWeather from './weatherApi.js';
+import getWeather from './api/weatherApi.js';
 
 console.log('begin');
 getWeather()

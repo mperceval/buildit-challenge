@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 
-import getWeather from '../js/weatherApi.js';
-import response from './fakeData/getWeatherResponse';
+import getWeather from '../../js/api/weatherApi.js';
+import response from '../fakeData/getWeatherResponse';
 
 
 describe('weatherApi', () => {
