@@ -80,7 +80,6 @@ function transformWeatherData(data, unit) {
      };
 
      req.onError = () => {
-       console.log('onError');
        reject(Error('Network Error'));
      };
 
