@@ -22,7 +22,7 @@ This will build, lint, test and run the code.
 
 http://buildit-challenge.esy.es
 
-## Improvements:
+## Improvements - Outstanding:
 
 1.  UI - Displaying errors.
 2.  UI - Make responsive.
